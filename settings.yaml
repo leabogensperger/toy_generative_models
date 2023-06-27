@@ -1,0 +1,16 @@
+dataset: 8gaussians # 8gaussians, bunny, moons
+model: flow # gmm, flow, vae, sm, dsm, ssm, gan
+
+gmm:
+  max_iter: 1000
+  n_comp: 10
+  n_samples: 2000
+  eps: 1.0E-6 # min_cov for stability
+
+flow: 
+  max_iter: 5000
+  lr: 5.0E-4
+  n_layers: 4 # number of invertible layers
+  size_z: 2
+  size_hidden: 32
+  n_samples: 2000
