@@ -7,7 +7,7 @@ import yaml
 import json
 
 import data
-import gmm, flow
+import gmm, flow, dsm
 
 device = 'cuda' # cuda, cpu
 
@@ -32,7 +32,8 @@ if __name__ == "__main__":
     elif cfg.model == 'flow':
         flow.estimate_density(x=x, cfg=cfg.flow)
 
+    elif cfg.model == 'dsm':
+        dsm.estimate_density(x=x, cfg=cfg.dsm)
+
     else:
         raise NotImplementedError
-
-    print('here')
